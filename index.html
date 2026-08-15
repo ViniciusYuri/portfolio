@@ -27,41 +27,124 @@
 
     /* Menu Lateral Esquerdo */
     aside {
-      width: 220px;
+      width: 240px;
       background-color: #f6f8fa;
       border-right: 1px solid #d0d7de;
-      padding: 32px 20px;
+      padding: 32px 18px;
       position: sticky;
       top: 0;
       height: 100vh;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
       flex-shrink: 0;
+      overflow-y: auto;
     }
 
-    .nav-brand {
+    /* Perfil e Foto */
+    .profile-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .profile-img {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #d0d7de;
+      background-color: #eaeef2;
+    }
+
+    /* Redes Sociais no Menu Lateral */
+    .social-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-links a {
+      color: #57606a;
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.1s ease;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-2px);
+    }
+
+    .social-links a.linkedin:hover { color: #0a66c2; }
+    .social-links a.github:hover { color: #24292f; }
+    .social-links a.email:hover { color: #d93025; }
+
+    .menu-divider {
+      border: 0;
+      height: 1px;
+      background-color: #d0d7de;
+      margin: 0;
+    }
+
+    /* Seletor de Idiomas */
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .lang-btn {
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid #d0d7de;
+      background-color: #ffffff;
+      color: #57606a;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      background-color: #eaeef2;
+      color: #0969da;
+    }
+
+    .lang-btn.active {
+      background-color: #0969da;
+      border-color: #0969da;
+      color: #ffffff;
+    }
+
+    .nav-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
       font-weight: 700;
-      font-size: 1.1rem;
-      color: #1f2328;
+      color: #8c959f;
+      letter-spacing: 0.5px;
+      margin-bottom: -10px;
+      padding-left: 4px;
     }
 
     nav {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
     }
 
     nav a {
       color: #57606a;
       text-decoration: none;
       font-size: 0.95rem;
-      padding: 6px 10px;
+      padding: 8px 12px;
       border-radius: 6px;
       transition: background-color 0.2s ease, color 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     nav a:hover {
@@ -112,22 +195,6 @@
       margin-bottom: 16px;
     }
 
-    .social-links {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .social-links img {
-      height: 24px;
-      transition: transform 0.15s ease;
-    }
-
-    .social-links a:hover img {
-      transform: translateY(-2px);
-    }
-
     .section-title {
       font-size: 1.25rem;
       font-weight: 600;
@@ -175,13 +242,35 @@
 </head>
 <body>
 
-  <!-- Menu de Navegação Esquerdo -->
+  <!-- Menu Lateral Esquerdo -->
   <aside>
-    <div class="nav-brand">Navegação</div>
+    <!-- Foto de Perfil Redonda -->
+    <div class="profile-area">
+      <img src="https://github.com/SEU_GITHUB.png" alt="Vinicius Melão" class="profile-img">
+      
+      <!-- Redes Sociais -->
+      <div class="social-links">
+        <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank" class="linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/SEU_GITHUB" target="_blank" class="github" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:seu-email@exemplo.com" class="email" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Seletor de Idiomas (3 opções) -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLanguage('pt')">PT</button>
+      <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+    </div>
+
+    <hr class="menu-divider">
+
+    <!-- Navegação -->
+    <span class="nav-label" id="label-nav">Menu</span>
     <nav>
-      <a href="#sobre"><i class="fa-regular fa-user"></i> Sobre</a>
-      <a href="#tecnologias"><i class="fa-solid fa-code"></i> Tecnologias</a>
-      <a href="#projetos"><i class="fa-solid fa-rocket"></i> Projetos</a>
+      <a href="#sobre"><i class="fa-regular fa-user"></i> <span id="nav-about">Sobre</span></a>
+      <a href="#tecnologias"><i class="fa-solid fa-code"></i> <span id="nav-tech">Tecnologias</span></a>
+      <a href="#projetos"><i class="fa-solid fa-rocket"></i> <span id="nav-proj">Projetos</span></a>
     </nav>
   </aside>
 
@@ -192,29 +281,17 @@
       
       <hr>
 
-      <span class="badge">Data Scientist</span>
+      <span class="badge" id="role-badge">Data Scientist</span>
 
-      <p class="about-text">
+      <p class="about-text" id="about-text">
         Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computação. Atualmente, estou cursando o MBA em Data Science, Inteligência Artificial e Analytics na USP ESALQ. Atuo no mercado financeiro, com experiência em produtos digitais, APIs e análise de dados, conectando tecnologia e negócio para transformar dados em insights e oportunidades de melhoria. Atuo na gestão técnica de APIs de financiamento de veículos, trabalhando com mais de 20 parceiros em produção e produtos que impactam milhares de clientes por mês. Atualmente, direciono minha carreira para Ciência de Dados, buscando aplicar tecnologia, estatística e inteligência artificial na resolução de problemas de negócio, especialmente no setor financeiro.
       </p>
-
-      <div class="social-links">
-        <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank">
-          <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/SEU_GITHUB" target="_blank">
-          <img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="GitHub">
-        </a>
-        <a href="mailto:seu-email@exemplo.com">
-          <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Gmail">
-        </a>
-      </div>
     </section>
 
     <hr>
 
     <section id="tecnologias">
-      <h2 class="section-title">🤖 Linguagens e Tecnologias</h2>
+      <h2 class="section-title">🤖 <span id="title-tech">Linguagens e Tecnologias</span></h2>
       <div class="tech-stack">
         <i class="devicon-python-plain colored" title="Python"></i>
         <i class="devicon-azuresqldatabase-plain colored" title="SQL"></i>
@@ -227,12 +304,65 @@
     <hr>
 
     <section id="projetos">
-      <h2 class="section-title">🚀 Projetos</h2>
+      <h2 class="section-title">🚀 <span id="title-proj">Projetos</span></h2>
       <div class="projects-content">
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p id="proj-text">Em breve novos projetos documentados aqui.</p>
       </div>
     </section>
   </main>
 
+  <script>
+    const translations = {
+      pt: {
+        navMenu: "Menu",
+        navAbout: "Sobre",
+        navTech: "Tecnologias",
+        navProj: "Projetos",
+        badge: "Data Scientist",
+        about: "Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computação. Atualmente, estou cursando o MBA em Data Science, Inteligência Artificial e Analytics na USP ESALQ. Atuo no mercado financeiro, com experiência em produtos digitais, APIs e análise de dados, conectando tecnologia e negócio para transformar dados em insights e oportunidades de melhoria. Atuo na gestão técnica de APIs de financiamento de veículos, trabalhando com mais de 20 parceiros em produção e produtos que impactam milhares de clientes por mês. Atualmente, direciono minha carreira para Ciência de Dados, buscando aplicar tecnologia, estatística e inteligência artificial na resolução de problemas de negócio, especialmente no setor financeiro.",
+        titleTech: "Linguagens e Tecnologias",
+        titleProj: "Projetos",
+        projText: "Em breve novos projetos documentados aqui."
+      },
+      en: {
+        navMenu: "Navigation",
+        navAbout: "About",
+        navTech: "Technologies",
+        navProj: "Projects",
+        badge: "Data Scientist",
+        about: "My name is Vinicius Melão, from São Paulo. Graduated in Computer Science. Currently pursuing an MBA in Data Science, Artificial Intelligence and Analytics at USP ESALQ. I work in the financial market with expertise in digital products, APIs, and data analysis, connecting technology and business to turn data into insights. I lead the technical management of vehicle financing APIs, collaborating with over 20 partners in production and delivering products that impact thousands of users monthly. Currently focusing my career on Data Science to apply technology, statistics, and AI to business problems.",
+        titleTech: "Languages & Technologies",
+        titleProj: "Projects",
+        projText: "New projects documented here soon."
+      },
+      es: {
+        navMenu: "Navegación",
+        navAbout: "Sobre mí",
+        navTech: "Tecnologías",
+        navProj: "Proyectos",
+        badge: "Data Scientist",
+        about: "Me llamo Vinicius Melão, natural de São Paulo. Graduado en Ciencias de la Computación. Actualmente cursando el MBA en Data Science, Inteligencia Artificial y Analytics en USP ESALQ. Trabajo en el mercado financiero con experiencia en productos digitales, APIs y análisis de datos, conectando tecnología y negocio para transformar datos en insights y oportunidades de mejora. Actúo en la gestión técnica de APIs de financiamiento de vehículos con más de 20 socios en producción. Actualmente orientando mi carrera hacia la Ciencia de Datos aplicando tecnología, estadística e IA.",
+        titleTech: "Lenguajes y Tecnologías",
+        titleProj: "Proyectos",
+        projText: "Pronto nuevos proyectos documentados aquí."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const data = translations[lang];
+      document.getElementById('label-nav').textContent = data.navMenu;
+      document.getElementById('nav-about').textContent = data.navAbout;
+      document.getElementById('nav-tech').textContent = data.navTech;
+      document.getElementById('nav-proj').textContent = data.navProj;
+      document.getElementById('role-badge').textContent = data.badge;
+      document.getElementById('about-text').textContent = data.about;
+      document.getElementById('title-tech').textContent = data.titleTech;
+      document.getElementById('title-proj').textContent = data.titleProj;
+      document.getElementById('proj-text').textContent = data.projText;
+    }
+  </script>
 </body>
 </html>
