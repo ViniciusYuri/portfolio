@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinicius Melão | Portfólio</title>
+  
+  <!-- Font Awesome & Devicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #24292f;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Menu Lateral Esquerdo */
+    aside {
+      width: 220px;
+      background-color: #f6f8fa;
+      border-right: 1px solid #d0d7de;
+      padding: 32px 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1f2328;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    nav a {
+      color: #57606a;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a:hover {
+      background-color: #eaeef2;
+      color: #0969da;
+    }
+
+    /* Conteúdo Principal */
+    main {
+      flex: 1;
+      max-width: 850px;
+      padding: 40px 48px;
+    }
+
+    .header {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1f2328;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #d0d7de;
+      margin: 20px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      color: #1f2328;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-family: monospace;
+      margin-bottom: 16px;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      color: #24292f;
+      line-height: 1.65;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .social-links img {
+      height: 24px;
+      transition: transform 0.15s ease;
+    }
+
+    .social-links a:hover img {
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1f2328;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tech-stack {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 2.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .projects-content {
+      font-size: 0.95rem;
+      color: #57606a;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #d0d7de;
+      }
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      main {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu de Navegação Esquerdo -->
+  <aside>
+    <div class="nav-brand">Navegação</div>
+    <nav>
+      <a href="#sobre"><i class="fa-regular fa-user"></i> Sobre</a>
+      <a href="#tecnologias"><i class="fa-solid fa-code"></i> Tecnologias</a>
+      <a href="#projetos"><i class="fa-solid fa-rocket"></i> Projetos</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section id="sobre">
+      <h1 class="header">👨‍💻 Vinicius Melão</h1>
+      
+      <hr>
+
+      <span class="badge">Data Scientist</span>
+
+      <p class="about-text">
+        Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computação. Atualmente, estou cursando o MBA em Data Science, Inteligência Artificial e Analytics na USP ESALQ. Atuo no mercado financeiro, com experiência em produtos digitais, APIs e análise de dados, conectando tecnologia e negócio para transformar dados em insights e oportunidades de melhoria. Atuo na gestão técnica de APIs de financiamento de veículos, trabalhando com mais de 20 parceiros em produção e produtos que impactam milhares de clientes por mês. Atualmente, direciono minha carreira para Ciência de Dados, buscando aplicar tecnologia, estatística e inteligência artificial na resolução de problemas de negócio, especialmente no setor financeiro.
+      </p>
+
+      <div class="social-links">
+        <a href="https://linkedin.com/in/SEU_LINKEDIN" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/SEU_GITHUB" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="GitHub">
+        </a>
+        <a href="mailto:seu-email@exemplo.com">
+          <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Gmail">
+        </a>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="tecnologias">
+      <h2 class="section-title">🤖 Linguagens e Tecnologias</h2>
+      <div class="tech-stack">
+        <i class="devicon-python-plain colored" title="Python"></i>
+        <i class="devicon-azuresqldatabase-plain colored" title="SQL"></i>
+        <i class="devicon-pandas-plain colored" title="Pandas"></i>
+        <i class="devicon-numpy-plain colored" title="NumPy"></i>
+        <i class="devicon-apachespark-original colored" title="Apache Spark"></i>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="projetos">
+      <h2 class="section-title">🚀 Projetos</h2>
+      <div class="projects-content">
+        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
