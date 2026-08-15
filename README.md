@@ -32,7 +32,7 @@ Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computa�
 ---
 
 ### 🤖 Linguagens e Tecnologias
-
+<p>
 <img 
     align="left" 
     alt="Python" 
@@ -73,6 +73,7 @@ Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computa�
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-plain-wordmark.svg" 
 />
+</p>
 <br/>
 <br/>
 
