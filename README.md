@@ -31,8 +31,8 @@ Me chamo Vinicius Melão, natural de São Paulo. Formado em Ciência da Computa�
 
 ---
 
-### 🤖 Linguagens e Tecnologias
 <p>
+### 🤖 Linguagens e Tecnologias
 <img 
     align="left" 
     alt="Python" 
