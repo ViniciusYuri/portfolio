@@ -25,18 +25,18 @@
       min-height: 100vh;
     }
 
-    /* Menu Lateral Esquerdo */
+    /* Menu Lateral Esquerdo Expandido */
     aside {
-      width: 240px;
+      width: 300px;
       background-color: #f6f8fa;
       border-right: 1px solid #d0d7de;
-      padding: 32px 18px;
+      padding: 40px 24px;
       position: sticky;
       top: 0;
       height: 100vh;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
       flex-shrink: 0;
       overflow-y: auto;
     }
@@ -47,12 +47,12 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 12px;
+      gap: 16px;
     }
 
     .profile-img {
-      width: 105px;
-      height: 105px;
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #d0d7de;
@@ -62,14 +62,14 @@
     /* Redes Sociais no Menu Lateral */
     .social-links {
       display: flex;
-      gap: 10px;
+      gap: 14px;
       align-items: center;
       justify-content: center;
     }
 
     .social-links a {
       color: #57606a;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       text-decoration: none;
       transition: color 0.2s ease, transform 0.1s ease;
     }
@@ -93,12 +93,12 @@
     .lang-switcher {
       display: flex;
       justify-content: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .lang-btn {
-      padding: 4px 10px;
-      font-size: 0.8rem;
+      padding: 6px 14px;
+      font-size: 0.85rem;
       font-weight: 600;
       border: 1px solid #d0d7de;
       background-color: #ffffff;
@@ -120,31 +120,31 @@
     }
 
     .nav-label {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       font-weight: 700;
       color: #8c959f;
       letter-spacing: 0.5px;
-      margin-bottom: -10px;
-      padding-left: 4px;
+      margin-bottom: -12px;
+      padding-left: 6px;
     }
 
     nav {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     nav a {
       color: #57606a;
       text-decoration: none;
-      font-size: 0.95rem;
-      padding: 8px 12px;
+      font-size: 1rem;
+      padding: 10px 14px;
       border-radius: 6px;
       transition: background-color 0.2s ease, color 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     nav a:hover {
@@ -155,8 +155,8 @@
     /* Conteúdo Principal */
     main {
       flex: 1;
-      max-width: 850px;
-      padding: 40px 48px;
+      max-width: 900px;
+      padding: 44px 56px;
     }
 
     .header {
@@ -208,7 +208,7 @@
     .tech-stack {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
       font-size: 2.2rem;
       flex-wrap: wrap;
       margin-bottom: 24px;
@@ -229,6 +229,7 @@
         position: relative;
         border-right: none;
         border-bottom: 1px solid #d0d7de;
+        padding: 24px;
       }
       nav {
         flex-direction: row;
